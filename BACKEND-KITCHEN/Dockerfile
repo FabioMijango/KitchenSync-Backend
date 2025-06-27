@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY . .
 
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 FROM amazoncorretto:23-alpine
